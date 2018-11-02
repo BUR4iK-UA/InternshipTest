@@ -16,7 +16,7 @@ public class  Application {
         university.addStudent(new Student("Igor Perechrest", new Knowledge(5)));
 
         Internship internship = new Internship("Interlink");
-        internship.goToInternship(university.getListStudents(), university.getAverageLevel());
+        internship.addToInternship(university.getListStudents(), university.getAverageLevel());
         System.out.println("List of internship's students:");
         System.out.println(internship.getStudents());
     }
