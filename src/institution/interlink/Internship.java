@@ -18,7 +18,7 @@ public class Internship {
         listStudents.add(student);
     }
 
-    public void goToInternship(List<Student> listStudents, int averageLevel) {
+    public void addToInternship(List<Student> listStudents, int averageLevel) {
         for (Student student: listStudents) {
             if (student.getKnowledge().getLevel() > averageLevel){
                 setStudent(student);
