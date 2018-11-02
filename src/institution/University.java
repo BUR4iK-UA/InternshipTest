@@ -14,10 +14,6 @@ public class University {
         this.name = name;
     }
 
-    public void setStudent(Student student) {
-
-    }
-
     public void addStudent(Student student) {
         listStudents.add(student);
     }
@@ -28,5 +24,14 @@ public class University {
 
     public void setListStudents(List<Student> listStudents) {
         this.listStudents = listStudents;
+    }
+
+    public int getAverageLevel() {
+        double averageLevel = 0;
+        for (Student student : listStudents) {
+            averageLevel += student.getKnowledge().getLevel();
+        }
+        averageLevel = averageLevel / listStudents.size();
+        return (int) averageLevel;
     }
 }

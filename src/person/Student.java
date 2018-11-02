@@ -12,6 +12,11 @@ public class Student {
         this.knowledge = new Knowledge(0);
     }
 
+    public Student(String name, Knowledge knowledge){
+        this.name = name;
+        this.knowledge = knowledge;
+    }
+
     public void setKnowledge(Knowledge knowledge) {
         this.knowledge = knowledge;
     }
