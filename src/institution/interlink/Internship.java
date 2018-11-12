@@ -8,27 +8,28 @@ import java.util.List;
 public class Internship {
 
     private String name;
-    private List<Student> listStudents = new LinkedList<Student>();
+    private List<Student> listStudents;
 
-    public Internship(String name) {
+    public Internship(String name){
         this.name = name;
+        listStudents = new LinkedList<Student>();
     }
 
-    public void setStudent(Student student) {
+    public void setStudent(Student student){
         listStudents.add(student);
     }
 
-    public void addToInternship(List<Student> listStudents, int averageLevel) {
-        for (Student student: listStudents) {
+    public void addToInternship(List<Student> listStudents, int averageLevel){
+        for (Student student : listStudents){
             if (student.getKnowledge().getLevel() > averageLevel){
                 setStudent(student);
             }
         }
     }
 
-    public String getStudents() {
+    public String getStudents(){
         String result = new String();
-        for (Student student: listStudents) {
+        for (Student student : listStudents){
             result = result.concat(student.getName() + "\n");
         }
         return result;
